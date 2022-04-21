@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <h3>Welcome! Please Register here</h3>
+    <br/>
+    <form method="POST" enctype="multipart/form-data">
+        {{ member_form.hidden_tag() }}
+
+
+        {{ member_form.title.label(class="form-label") }}
+        {{ member_form.title(class="form-control") }}
+
+        {{ member_form.first_name.label(class="form-label") }}
+        {{ member_form.first_name(class="form-control") }}
+
+        {{ member_form.middle_name.label(class="form-label") }}
+        {{ member_form.middle_name(class="form-control") }}
+
+        {{ member_form.last_name.label(class="form-label") }}
+        {{ member_form.last_name(class="form-control") }}
+
+        {{ member_form.address.label(class="form-label") }}
+        {{ member_form.address(class="form-control") }}
+
+        {{ member_form.email.label(class="form-label") }}
+        {{ member_form.email(class="form-control") }}
+
+        {{ member_form.gender.label(class="form-label") }}
+        {{ member_form.gender(class="form-control") }}
+
+        {{ member_form.birth_date.label(class="form-label") }}
+        {{ member_form.birth_date(class="form-control") }}
+
+        {{ member_form.phone.label(class="form-label") }}
+        {{ member_form.phone(class="form-control") }}
+
+        {{ member_form.country.label(class="form-label") }}
+        {{ member_form.country(class="form-control") }}
+        <br/>
+        {{ member_form.submit(class="btn btn-secondary") }}
+    </form>
+</div>
+{% endblock %}

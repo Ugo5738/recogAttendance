@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Thank you {{ first_name }}, please upload an image of your face!</h4>
+</div>
+<br>
+<br>
+<div class="container">
+    <form class="upload-form" method="post" enctype = "multipart/form-data">
+        <p><input type="file" name="file"></p>
+        <button type="submit" name="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>
+{% endblock %}

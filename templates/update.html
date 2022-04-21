@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <h3>Update Details</h3>
+    <br/>
+    <form action="/update/{{ member_to_update.id }}" method="POST" enctype="multipart/form-data">
+        {{ member_form.hidden_tag() }}
+
+        {{ member_form.title.label(class="form-label") }}
+        {{ member_form.title(class="form-control", value=member_to_update.title) }}
+
+        {{ member_form.first_name.label(class="form-label") }}
+        {{ member_form.first_name(class="form-control", value=member_to_update.first_name) }}
+
+        {{ member_form.middle_name.label(class="form-label") }}
+        {{ member_form.middle_name(class="form-control", value=member_to_update.middle_name) }}
+
+        {{ member_form.last_name.label(class="form-label") }}
+        {{ member_form.last_name(class="form-control", value=member_to_update.last_name) }}
+
+        {{ member_form.address.label(class="form-label") }}
+        {{ member_form.address(class="form-control", value=member_to_update.address) }}
+
+        {{ member_form.email.label(class="form-label") }}
+        {{ member_form.email(class="form-control", value=member_to_update.email) }}
+
+        {{ member_form.image.label(class="form-label") }}
+        {{ member_form.image(class="form-control", value=member_to_update.email) }}
+        <br/>
+        <br/>
+        {{ member_form.submit(class="btn btn-secondary") }}
+    </form>
+</div>
+
+{% endblock %}

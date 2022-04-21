@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Hello there! Welcome to Recog</h1>
+</div>
+<div class="d-grid gap-2 d-md-block">
+    <a href="{{ url_for('admin_register') }}" class="btn btn-outline-primary btn-lg">Register</a>
+    <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg">Login</a>
+</div>
+
+{% endblock %}
