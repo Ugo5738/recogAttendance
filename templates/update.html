@@ -5,7 +5,7 @@
 <div class="shadow p-3 mb-5 bg-body rounded">
     <h3>Update Details</h3>
     <br/>
-    <form action="/update/{{ member_to_update.id }}" method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
         {{ member_form.hidden_tag() }}
 
         {{ member_form.title.label(class="form-label") }}
